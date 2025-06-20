@@ -1,0 +1,39 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "name": "ah",
+  "email": "ah@email.test",
+  "password": "Secret123$",
+  "passwordConfirmation": "Secret123$"
+}
+
+###
+
+POST http://localhost:3000/tokens
+Content-Type: application/json
+
+{
+  "email": "u2@email.com", 
+  "password": "secret123ABC!"
+}
+###
+
+POST http://localhost:3000/tokens/
+x-refresh-token: eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5MTkyYWE1OS0wY2M3LTRiODYtODc4Mi0xZjBhMGQzOWQ4YzUiLCJ0eXBlIjoiYWNjZXNzIiwibmJmIjoxNjc5NjgyODgyLCJleHAiOjE2ODAyODc2ODJ9.J2Lw5qpHOVqjfZdzFWYqh24Uufbbnx8i0YTBf4oZOSb7p9QW_U9q-5yOQu68txZbiO_knB2S7Jcj65RJaqLlvw
+###
+
+Delete http://localhost:3000/tokens/refresh/6b7a6777-169a-4990-96a7-3683dfd833cb
+x-refresh-token: eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1OTcwYTVkMC02NTAxLTRiYTktOWEzZC1kYmQ4ODJiNTA2MjIiLCJ0eXBlIjoicmVmcmVzaCIsImp0aSI6IjM1NmU4Zjc1LTE2YTEtNGU5OC1iYjAwLTA3NzBlYjcwYmM1YiIsIm5iZiI6MTY3OTY4MzI0OSwiZXhwIjoxNjgwMjg4MDQ5fQ.1qStjJ-b-x_WYl6mKNlYja9BiBpX_N02FQRfFO5MXa81CJuWt4ROfPtIF8dE3EdRNC03Uc1EsrvsqlO5MP629A
+
+###
+
+{
+  "refreshToken": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNWMwZGMzOC0yMjBjLTQ2ZGEtOTY4NC1jYTE1NDU5OWZlNTIiLCJ0eXBlIjoicmVmcmVzaCIsImp0aSI6IjZiN2E2Nzc3LTE2OWEtNDk5MC05NmE3LTM2ODNkZmQ4MzNjYiIsIm5iZiI6MTY3OTY4MzIyNywiZXhwIjoxNjgwMjg4MDI3fQ.4TsrEbZzrxUDkTX-ccC0c1loGiAtZ5CT6gjBqdWO6lydWxIwFHPABPOLzi72F8DixfQhizaiNfhGbjr_qTJxxg",
+  "accessToken": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjNWMwZGMzOC0yMjBjLTQ2ZGEtOTY4NC1jYTE1NDU5OWZlNTIiLCJ0eXBlIjoiYWNjZXNzIiwibmJmIjoxNjc5NjgzMjI3LCJleHAiOjE2ODAyODgwMjd9.6T-YWIwkJdrirykVIMMFdnSVR6Aojbl5mrZk7h2tWt7tmN355W6ovdaUW42b6Op7bKA9yhI5eKk3Z0PV-vthpQ"
+}
+
+{
+  "refreshToken": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1OTcwYTVkMC02NTAxLTRiYTktOWEzZC1kYmQ4ODJiNTA2MjIiLCJ0eXBlIjoicmVmcmVzaCIsImp0aSI6IjM1NmU4Zjc1LTE2YTEtNGU5OC1iYjAwLTA3NzBlYjcwYmM1YiIsIm5iZiI6MTY3OTY4MzI0OSwiZXhwIjoxNjgwMjg4MDQ5fQ.1qStjJ-b-x_WYl6mKNlYja9BiBpX_N02FQRfFO5MXa81CJuWt4ROfPtIF8dE3EdRNC03Uc1EsrvsqlO5MP629A",
+  "accessToken": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1OTcwYTVkMC02NTAxLTRiYTktOWEzZC1kYmQ4ODJiNTA2MjIiLCJ0eXBlIjoiYWNjZXNzIiwibmJmIjoxNjc5NjgzMjQ5LCJleHAiOjE2ODAyODgwNDl9.YTHRDXs9liSHIwpOovvXPf8FUMcqaiazN__a77iA6K6ZBCcXXSo2nvnHC69rwWdSih_NJ2R0FxoHjQk3ZBoPsw"
+}

@@ -1,0 +1,36 @@
+// https://aka.ms/tsconfig
+{
+  "ts-node": {
+    "esm": true,
+    "swc": true
+  },
+
+  "include": ["./src/**/*"],
+  "exclude": ["src/**/*.test.ts", "src/**/*.spec.ts"],
+  "compilerOptions": {
+    // "baseUrl": ".",
+    // "paths": {
+    //   "@src/*": ["src/*"]
+    // },
+
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "nodenext",
+
+    "allowJs": true,
+    "removeComments": true,
+
+    "noEmitOnError": false,
+    "outDir": "./build",
+
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "experimentalDecorators": true,
+
+    "strict": true,
+    "noImplicitAny": false,
+
+    "skipLibCheck": true
+  }
+}
